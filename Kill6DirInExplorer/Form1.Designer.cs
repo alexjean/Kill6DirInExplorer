@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cBox3DObject = new System.Windows.Forms.CheckBox();
+            this.cBox3dObject = new System.Windows.Forms.CheckBox();
             this.cBoxDocuments = new System.Windows.Forms.CheckBox();
             this.cBoxDownloads = new System.Windows.Forms.CheckBox();
             this.cBoxMusic = new System.Windows.Forms.CheckBox();
@@ -40,16 +40,16 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cBox3DObject
+            // cBox3dObject
             // 
-            this.cBox3DObject.AutoSize = true;
-            this.cBox3DObject.Location = new System.Drawing.Point(24, 43);
-            this.cBox3DObject.Margin = new System.Windows.Forms.Padding(4);
-            this.cBox3DObject.Name = "cBox3DObject";
-            this.cBox3DObject.Size = new System.Drawing.Size(75, 20);
-            this.cBox3DObject.TabIndex = 0;
-            this.cBox3DObject.Text = "3D物件";
-            this.cBox3DObject.UseVisualStyleBackColor = true;
+            this.cBox3dObject.AutoSize = true;
+            this.cBox3dObject.Location = new System.Drawing.Point(24, 43);
+            this.cBox3dObject.Margin = new System.Windows.Forms.Padding(4);
+            this.cBox3dObject.Name = "cBox3dObject";
+            this.cBox3dObject.Size = new System.Drawing.Size(75, 20);
+            this.cBox3dObject.TabIndex = 0;
+            this.cBox3dObject.Text = "3D物件";
+            this.cBox3dObject.UseVisualStyleBackColor = true;
             // 
             // cBoxDocuments
             // 
@@ -99,7 +99,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cBoxVideos);
-            this.groupBox1.Controls.Add(this.cBox3DObject);
+            this.groupBox1.Controls.Add(this.cBox3dObject);
             this.groupBox1.Controls.Add(this.cBoxPictures);
             this.groupBox1.Controls.Add(this.cBoxDocuments);
             this.groupBox1.Controls.Add(this.cBoxMusic);
@@ -157,6 +157,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Kill Dir in 資源管理器";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -165,7 +166,7 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox cBox3DObject;
+        private System.Windows.Forms.CheckBox cBox3dObject;
         private System.Windows.Forms.CheckBox cBoxDocuments;
         private System.Windows.Forms.CheckBox cBoxDownloads;
         private System.Windows.Forms.CheckBox cBoxMusic;
