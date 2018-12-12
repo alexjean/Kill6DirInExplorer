@@ -1,5 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Kill6DirInExplorer
@@ -134,5 +136,41 @@ namespace Kill6DirInExplorer
 
         }
 
+        private void btnClearIconCache_Click(object sender, EventArgs e)
+        {
+            var cmds = new List<string> {
+                @"taskkill /IM explorer.exe /F",
+                @"cd %USERPROFILE%\AppData\Local",
+                @"del /a IconCache.db",
+                @"start explorer",
+                @"exit"
+            };
+            Process p = new Process();
+            var info = p.StartInfo;
+            info.FileName = "cmd.exe";
+            info.UseShellExecute = false;
+            info.RedirectStandardOutput = true;
+            info.RedirectStandardInput = true;
+            info.RedirectStandardError = true;
+            info.CreateNoWindow = true;
+            p.Start();
+            try
+            {
+                foreach (var s in cmds)
+                {
+                    listBox1.Items.Add(s + "\n");
+                    p.StandardInput.WriteLine(s);
+
+                }
+                string msg = p.StandardOutput.ReadToEnd();
+                listBox1.Items.Add(msg + "\n");
+                listBox1.Items.Add("Jobs done!\n");
+            }
+            catch (Exception ex)
+            {
+                listBox1.Items.Add(ex.Message);
+            }
+            p.Close();
+        }
     }
 }

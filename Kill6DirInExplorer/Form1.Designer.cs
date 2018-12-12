@@ -37,7 +37,11 @@
             this.cBoxVideos = new System.Windows.Forms.CheckBox();
             this.cBoxPictures = new System.Windows.Forms.CheckBox();
             this.btnDo = new System.Windows.Forms.Button();
+            this.btnClearIconCache = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cBox3dObject
@@ -98,6 +102,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnDo);
             this.groupBox1.Controls.Add(this.cBoxVideos);
             this.groupBox1.Controls.Add(this.cBox3dObject);
             this.groupBox1.Controls.Add(this.cBoxPictures);
@@ -109,7 +114,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(285, 338);
+            this.groupBox1.Size = new System.Drawing.Size(181, 389);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "要隱藏的打勾";
@@ -138,7 +143,7 @@
             // 
             // btnDo
             // 
-            this.btnDo.Location = new System.Drawing.Point(99, 394);
+            this.btnDo.Location = new System.Drawing.Point(24, 345);
             this.btnDo.Name = "btnDo";
             this.btnDo.Size = new System.Drawing.Size(121, 37);
             this.btnDo.TabIndex = 6;
@@ -146,13 +151,42 @@
             this.btnDo.UseVisualStyleBackColor = true;
             this.btnDo.Click += new System.EventHandler(this.btnDo_Click);
             // 
+            // btnClearIconCache
+            // 
+            this.btnClearIconCache.Location = new System.Drawing.Point(109, 346);
+            this.btnClearIconCache.Name = "btnClearIconCache";
+            this.btnClearIconCache.Size = new System.Drawing.Size(130, 37);
+            this.btnClearIconCache.TabIndex = 7;
+            this.btnClearIconCache.Text = " 清除圖標Cache";
+            this.btnClearIconCache.UseVisualStyleBackColor = true;
+            this.btnClearIconCache.Click += new System.EventHandler(this.btnClearIconCache_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.listBox1);
+            this.groupBox2.Controls.Add(this.btnClearIconCache);
+            this.groupBox2.Location = new System.Drawing.Point(234, 22);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(362, 389);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(6, 15);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(350, 308);
+            this.listBox1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 489);
-            this.Controls.Add(this.btnDo);
+            this.ClientSize = new System.Drawing.Size(757, 452);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
@@ -160,6 +194,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -175,6 +210,9 @@
         private System.Windows.Forms.CheckBox cBoxVideos;
         private System.Windows.Forms.CheckBox cBoxPictures;
         private System.Windows.Forms.Button btnDo;
+        private System.Windows.Forms.Button btnClearIconCache;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
